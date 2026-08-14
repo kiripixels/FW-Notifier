@@ -190,11 +190,115 @@ With a request body such as:
 
 ```json
 {
-  "data": {}
+  "id": "00aa4abd-5778-4199-8161-0b49b2f212e5",
+  "webhookId": "00aa4abd-5778-4199-8161-0b49b2f212e5",
+  "shopId": "sh_c689d374-22ca-43d3-8d29-9ef0805cc4cb",
+  "type": "ORDER_PLACED",
+  "apiVersion": "V1",
+  "createdAt": "2020-08-13T09:05:36.939+00:00",
+  "testMode": false,
+  "data": {
+    "id": "00aa4abd-5778-4199-8161-0b49b2f212e5",
+    "shopId": "sh_c689d374-22ca-43d3-8d29-9ef0805cc4cb",
+    "friendlyId": "D3XZFWPP",
+    "checkoutId": "ch_BV44UYrXQA2T_Xcf1288tw",
+    "email": "supporter@fourthwall.com",
+    "emailMarketingOptIn": true,
+    "message": "Sample message",
+    "amounts": {
+      "subtotal": {
+        "value": 10,
+        "currency": "USD"
+      },
+      "shipping": {
+        "value": 10,
+        "currency": "USD"
+      },
+      "tax": {
+        "value": 10,
+        "currency": "USD"
+      },
+      "donation": {
+        "value": 10,
+        "currency": "USD"
+      },
+      "discount": {
+        "value": 10,
+        "currency": "USD"
+      },
+      "giftCards": [
+        {
+          "code": "<string>",
+          "amountUsed": {
+            "value": 10,
+            "currency": "USD"
+          }
+        }
+      ],
+      "total": {
+        "value": 10,
+        "currency": "USD"
+      }
+    },
+    "offers": [
+      {
+        "id": "00aa4abd-5778-4199-8161-0b49b2f212e5",
+        "name": "My t-shirt",
+        "slug": "my-t-shirt",
+        "description": "My t-shirt description",
+        "variant": {
+          "id": "00aa4abd-5778-4199-8161-0b49b2f212e5",
+          "name": "My t-shirt - Black, L",
+          "sku": "WDEK-DRE200L",
+          "unitPrice": {
+            "value": 10,
+            "currency": "USD"
+          },
+          "attributes": {
+            "description": "Black, L"
+          },
+          "quantity": 5,
+          "price": {
+            "value": 10,
+            "currency": "USD"
+          },
+          "weight": {
+            "value": 1,
+            "unit": "kg"
+          },
+          "dimensions": {
+            "length": 1,
+            "width": 2,
+            "height": 3,
+            "unit": "cm"
+          }
+        }
+      }
+    ],
+    "source": {
+      "type": "<string>",
+      "giftId": "gft_EdJvIXu3SEiXe_QkPavHSA"
+    },
+    "createdAt": "2020-08-13T09:05:36.939Z",
+    "updatedAt": "2020-08-13T09:05:36.939Z",
+    "promotionId": "prm_EdJvIXu3SEiXe_QkPavHSA",
+    "username": "Johnny123",
+    "trackingParams": {
+      "fbc": "<string>",
+      "fbp": "<string>",
+      "utm_source": "<string>",
+      "utm_medium": "<string>",
+      "utm_campaign": "<string>",
+      "utm_content": "<string>",
+      "utm_term": "<string>"
+    },
+    "metadata": {}
+  }
 }
 ```
+ Data from [Fourthwall Api Documentation](https://docs.fourthwall.com/api-reference/order-events/order-placed)
 
-This is useful when your webhook provider allows you to configure a separate endpoint for each event type.
+ This is useful when your webhook provider allows you to configure a separate endpoint for each event type.
 
 ---
 
