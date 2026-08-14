@@ -456,33 +456,6 @@ X-Webhook-Secret: your_webhook_secret
 
 ---
 
-## 📁 Project Structure
-
-```text
-FW-Notifier/
-├── .env.example
-├── config.js
-├── discordClient.js
-├── handlers.js
-├── index.js
-├── server.js
-├── package.json
-└── README.md
-```
-
-### Core Files
-
-| File               | Purpose                                  |
-| ------------------ | ---------------------------------------- |
-| `index.js`         | Application entry point.                 |
-| `server.js`        | Express server and webhook routes.       |
-| `config.js`        | Environment configuration.               |
-| `discordClient.js` | Discord connection and channel handling. |
-| `handlers.js`      | Fourthwall event handlers.               |
-| `.env.example`     | Example environment configuration.       |
-
----
-
 ## 🏗️ Architecture
 
 FW-Notifier keeps the HTTP layer and Discord logic separated.
@@ -548,7 +521,7 @@ npm install -g pm2
 Start FW-Notifier:
 
 ```bash
-pm2 start index.js --name fw-notifier
+pm2 start npm -- name "fw-notifier" -- start
 ```
 
 Save the process:
